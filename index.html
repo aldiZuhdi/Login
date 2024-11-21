@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form | Aldi</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        padding: 0px;
+        margin: 0px;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url("https://i.pinimg.com/enabled_lo_mid/736x/a6/da/84/a6da84cf2431cfed0fd1a2283ac9a77b.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+      form {
+        width: 300px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(13.4px);
+        -webkit-backdrop-filter: blur(13.4px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .cardTitle {
+        font-size: 35px;
+        font-weight: 800;
+        text-align: center;
+        color: white;
+      }
+      label {
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        font-size: 16px;
+        font-weight: 300;
+        color: white;
+      }
+      .input {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.7);
+      }
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 10px;
+        background-color: transparent;
+        color: #121212;
+      }
+      svg {
+        width: 25px;
+        color: #121212;
+      }
+      #a {
+        padding-left: 10px;
+      }
+      .passwordToggle {
+        margin-right: 10px;
+      }
+      .passwordOn {
+        display: block;
+      }
+      .passwordOff {
+        display: none;
+      }
+      button {
+        height: 40px;
+        margin-top: 100px;
+        border-radius: 50px;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 1);
+      }
+      button:active {
+        border: 1px solid #121212;
+        background: rgb(0, 149, 255);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="https://aldizuhdi.github.io/profile">
+      <div class="cardTitle">Login</div>
+      <label for="">Username</label>
+      <div class="input">
+        <svg id="a" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+        </svg>
+        <input type="text" name="text" id="text" autocomplete="off" required />
+      </div>
+      <label for="">Password</label>
+      <div class="input">
+        <svg id="a" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+          />
+        </svg>
+        <input type="password" name="password" id="password" autocomplete="off" required />
+        <svg id="password" onclick="togglePassword(true)" class="passwordOn passwordToggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+          />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+        <svg id="password" onclick="togglePassword(false)" class="passwordOff passwordToggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
+          />
+        </svg>
+      </div>
+      <button type="submit">Kirim</button>
+    </form>
+    <script>
+      const passwordOn = document.getElementsByClassName("passwordOn")[0]; //svg untuk melihat password
+      const passwordOff = document.getElementsByClassName("passwordOff")[0]; //svg untuk menyembunyikan password
+      const inPassword = document.getElementById("password"); //input password
+      function togglePassword() {
+        if (inPassword.type === "password") {
+          inPassword.type = "text";
+          passwordOff.style.display = "block";
+          passwordOn.style.display = "none";
+        } else {
+          inPassword.type = "password";
+          passwordOff.style.display = "none";
+          passwordOn.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
